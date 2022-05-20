@@ -38,6 +38,8 @@ namespace UserWebAPI
                 configure.JsonSerializerOptions.AllowTrailingCommas = true;
             });
             services.AddDbContext<DBFormula1Context>(option => option.UseSqlServer("Server=LMA003518\\SQLEXPRESS;Database=DBFormula1;Trusted_Connection=True;"));
+            
+            
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(
                 options =>
                 {

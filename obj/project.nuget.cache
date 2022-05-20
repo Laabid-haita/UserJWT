@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ekQwe5elsjLe1CsuVVUgCEGfBcTTNrPa0sHV7Otwb9m7wgp2WjtYzThN0nWNS3L6eSqLdyzfneHGh07ZpuvVAg==",
+  "dgSpecHash": "kkTvD3B4E2MFoaTJDKDRInQJ1lwwjl/FJcB6ai7Eeebz72ZQumaE1E4w6AFnxCoUkmcp7+9g01PCIP5c7AIWQg==",
   "success": true,
   "projectFilePath": "C:\\Users\\hlaabid\\source\\repos\\UserWebAPI\\UserWebAPI\\UserWebAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\hlaabid\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\hlaabid\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\hlaabid\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.22\\microsoft.aspnetcore.authentication.jwtbearer.3.1.22.nupkg.sha512",
     "C:\\Users\\hlaabid\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

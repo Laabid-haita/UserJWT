@@ -6,10 +6,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using UserWebAPI.Models;
-
+using BC = BCrypt.Net.BCrypt;
 namespace UserWebAPI.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/User")]
     [ApiController]
     public class UserController : ControllerBase
@@ -65,6 +65,7 @@ namespace UserWebAPI.Controllers
 
         public async Task<ActionResult<User>> PostUsers(User user)
         {
+            user.Password = BC.HashPassword(user.Password);
             _formulaContext.Users.Add(user);
             await _formulaContext.SaveChangesAsync();
 

@@ -9,8 +9,9 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using BC = BCrypt.Net.BCrypt;
 using UserWebAPI.Models;
-
+using System.Linq;
 
 namespace UserWebAPI.Controllers
 {
@@ -32,8 +33,9 @@ namespace UserWebAPI.Controllers
             if (userData != null && userData.Email!=null && userData.Password != null)
             {
 
-                var user = await GetUser(userData.Email, userData.Password);
-                if (user != null)
+                //var user = await GetUser(userData.Email, userData.Password);
+                var user = _formulaContext.Users.SingleOrDefault(x => x.Email == userData.Email);
+                if (user != null || BC.Verify(userData.Password, user.Password))
                 {
                     var claims = new[]
                     {
